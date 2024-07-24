@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="css.css">
+    <!-- icons taken from font awesome website college mail -->
+    <script src="https://kit.fontawesome.com/924e2eb5f2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+      integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">KP</h1 class="logo">
+                <ul id="sidemenu">
+                    <li></i><a href="#header"><i class="fa-solid fa-house fa-sm"></i>&nbsp;&nbsp;Home</a></li>
+                    <li></i><a href="#about"><i class="fa-solid fa-address-card fa-sm"></i>&nbsp;&nbsp;About</a></li>
+                    <li></i><a href="#skill-Page"><i class="fa-solid fa-bell-concierge fa-sm"></i>&nbsp;&nbsp;Skills</a></li>
+                    <li><a href="#portfolio"><i class="fa-solid fa-briefcase fa-sm"></i>&nbsp;&nbsp;Projects</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-address-book fa-sm"></i>&nbsp;&nbsp;Contact Us</a></li>
+                    <i class="fa-sharp fa-solid fa-xmark kp" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars kp" onclick="openmenu()"></i>
+            </nav>
+
+            <div class="header-text">
+                <h1>Hi There!</h1>
+                <h1>I'm <b>Kunal Punia</b></h1>
+                <!-- <p>Web Developer</p> -->
+                <div class="show-hide-text">
+                    <div id="text" class="text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------- About ------------------------------->
+    <div id="about">
+        <div class="conatiner">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/DSC00002-Photoroom crop.png   " alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I love the process of changing a raw idea into a website or a product that impacts lives. I want to do work that
+                        challenges me as a developer and work that I can be proud of.
+                    </p>
+
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Education</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <!-- <div class="tab-links" onclick="opentab('education')">Education</div> -->
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>B.Tech</span><br>• SRM AP UNIVERSITY<br>• GPA: 8.5/10</li>
+                            <li><span>Higher Secondary Certificate</span><br>• Sainik School Amaravathinagar<br>• 12th Grade percentage : 87</li>
+                            <!-- <li><span>App Development</span><br>Building Android/Ios apps</li> -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Front-End Developer</span><br>• Edunet<br>• 2024</li>
+                            <li><span>Front-End Developer</span><br>• MV Clouds<br>• 2024</li>
+                            <!-- <li><span>App Development</span><br>Building Android/Ios apps</li> -->
+                        </ul>
+                    </div>
+                    <!-- <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Punia</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/Ios apps</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------serviecs ------------------------->
+    <!-- <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Skills</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code fa-xl"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Commodi debitis esse itaque dolorem eligendi tempora quibusdam animi quo eaque ratione vitae
+                        praesentium
+                        ut quidem et excepturi, deserunt distinctio recusandae fugit.</p>
+                    <a href="#">Learn Mode</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop fa-xl"></i>
+                    <h2>UI/Ux Design</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Commodi debitis esse itaque dolorem eligendi tempora quibusdam animi quo eaque ratione vitae
+                        praesentium
+                        ut quidem et excepturi, deserunt distinctio recusandae fugit.</p>
+                    <a href="#">Learn Mode</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios fa-xl"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Commodi debitis esse itaque dolorem eligendi tempora quibusdam animi quo eaque ratione vitae
+                        praesentium
+                        ut quidem et excepturi, deserunt distinctio recusandae fugit.</p>
+                    <a href="#">Learn Mode</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Skilld -->
+    <section id="skill-Page">
+
+        <div class="skillsContainer">
+          <div class="skillsHeading">
+            <h1 class="skillHeading">SKILLS</h1>
+  
+            <div class="skills" id="skill-Cards">
+              <div class="html skillCard">
+                <img class="skillImage" src="images/html.png" alt="" />
+                <h2>HTML</h2>
+              </div>
+              <div class="css skillCard">
+                <img class="skillImage" src="images/css.png" alt="" />
+                <h2>CSS</h2>
+              </div>
+              <div class="js skillCard">
+                <img class="skillImage" src="images/js (1).png" alt="" />
+                <h2>JavaScript</h2>
+              </div>
+              <div class="react skillCard">
+                <img class="skillImage" src="images/react.png" alt="" />
+                <h2>React Js</h2>
+              </div>
+              <div class="tailwind skillCard">
+                <img class="skillImage" src="images/tailwind.png" alt="" />
+                <h2>Tailwind</h2>
+              </div>
+              <div class="bootstrap skillCard">
+                <img class="skillImage" src="images/bootstrap.png" alt="" />
+                <h2>Bootstrap</h2>
+              </div>
+              <div class="gsap skillCard">
+                <img class="skillImage" src="images/greensock@2x.png" alt="" />
+                <h2>GSAP</h2>
+              </div>
+              <div class="cPlusPlus skillCard">
+                <img class="skillImage" src="images/c-.png" alt="" />
+                <h2>C/C++</h2>
+              </div>
+              <div class="java skillCard">
+                <img class="skillImage" src="images/java.png" alt="" />
+                <h2>Java</h2>
+              </div>
+              <div class="python skillCard">
+                <img class="skillImage" src="images/python.png" alt="" />
+                <h2>Python</h2>
+              </div>
+              <div class="gitAndGitHub skillCard">
+                <img class="skillImage" src="images/git.png" alt="" />
+                <h2>Git&Github</h2>
+              </div>
+              <div class="mysql skillCard">
+                <img class="skillImage" src="images/mysql.png" alt="" />
+                <h2>My SQL</h2>
+              </div>
+              <div class="jquery skillCard">
+                <img class="skillImage" src="images/Jquery.webp" alt="" />
+                <h2>JQuery</h2>
+              </div>
+              
+              
+              
+              <div class="jquery skillCard">
+                <img class="skillImage"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNyOe4xJhJFvDUbm1OSFnnEc4plFTvdYrBmOfNf-YUNA&s"
+                  alt="" />
+                <h2>MongoDB</h2>
+              </div>
+              
+              <div class="jquery skillCard">
+                <img class="skillImage" src="https://miro.medium.com/v2/resize:fit:800/1*bc9pmTiyKR0WNPka2w3e0Q.png"
+                  alt="" />
+                <h2>NodeJs</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </section>
+
+
+    <!-- -------------Portfolio---------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img class="Social-img" src="images/Social-img.png" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Quincy's Tavern is a social media platform designed to bring people together for shared enjoyment and connection. 
+                            While it's still under development, I am actively implementing many unique ideas to enhance the user experience.</p>
+                        <a href="https://github.com/kunalpunia94/Social-Media-App" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img class="Social-img" src="images/Lead-img.png" alt="">
+                    <div class="layer">
+                        <h3>Lead Tracker Extension</h3>
+                        <p>Lead Tracker Extension is a browser extension designed to help users to track their web browser</p>
+                        <a href="https://github.com/kunalpunia94/Lead-Tracker-Extension" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img class="Social-img" src="images/Text-img.png" alt="">
+                    <div class="layer">
+                        <h3>Text Manipulator</h3>
+                        <p>A text manipulator app is a tool designed to modify, analyze, or format text data according to specific
+                             requirements. Such an app can be useful for various purposes, including content editing, data processing, 
+                             code formatting, and more.</p>
+                        <a href="https://github.com/kunalpunia94/Text-Manipulator" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- ---------------------contact ---------------------- -->
+     <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>kunalpunia94@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7668070294</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/kunalpunia94/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/kunalpunia94/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/kunalpunia94/" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://github.com/kunalpunia94" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="New Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div id="copy" class="copywrite">
+            <p>Copyright &copy; kunal. Made with <i class="fa-solid fa-heart"></i> by Kunal Punia</p>
+        </div>
+     </div>
+
+
+    <script src="js.js"></script>
+    <!-- this is for the google form got this from github -->
+     <!-- how we added please check the video -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbynW6gpHsTy9PbBDujk2eivbf6rHh8_UkZZQ7WruHLaG--BFuvXvk9cPXjOkGM8ZQtc/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+
+</html>
